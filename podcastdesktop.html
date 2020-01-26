@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="podcaststyle.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
     <script src="https://kit.fontawesome.com/9dd00af5f8.js" crossorigin="anonymous"></script>
     <title>Podcast</title>
 </head>
@@ -21,15 +20,12 @@
         <div class="logo">
             <img class="bounce-in-top" src="/assets/logo.svg" alt="logo">
 
-
-
             <label for="menu-toggle">
                 <div class="button">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-
             </label>
         </div>
 
@@ -38,13 +34,13 @@
         <ul class="menu-lista" id="menu">
 
             <li>
-                <a href="#">EPISODIOS</a></li>
+                <a href="#episodios">EPISODIOS</a></li>
             <li>
-                <a href="#">NOSOTROS</a></li>
+                <a href="#nosotros">NOSOTROS</a></li>
             <li>
-                <a href="#">ENTREVISTAS</a></li>
+                <a href="#entrevistas">ENTREVISTAS</a></li>
             <li>
-                <a href="#">TÓPICOS</a></li>
+                <a href="#topicos">TÓPICOS</a></li>
 
         </ul>
     </nav>
@@ -60,9 +56,9 @@
 
     <div id="episodios" class="episodios">
 
-        <h3>Episodios</h3>
-
+        
         <div class="episodios-container">
+        <h3>Episodios</h3>   
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
@@ -78,16 +74,14 @@
 
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
                 frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
-
         </div>
 
 
     </div>
 
-    <div class="telefono">
+    <div class="telefono" id="nosotros">
 
-        <div class="donde-venimos">
+        <div class="tel-imagen">
             <img src="/assets/phone.png" alt="phone-donde-venimos">
         </div>
 
@@ -100,12 +94,10 @@
                 there is no hint that help will come from elsewhere to save us from ourselves.</p>
 
         </div>
-        <div>
-            <img class="tel" src="" alt="">
-        </div>
+
     </div>
 
-    <div class="invitados">
+    <div class="invitados" id="entrevistas">
 
         <h2>Invitadas/os Estelares</h2>
 
@@ -129,18 +121,26 @@
     </div>
 
 
-    <div class="temas">
+    <div class="temas" id="topicos">
         <h2>Algunos de nuestros temas</h2>
 
         <div class="temas-icons">
-            <img class="icons" src="/assets/icon1.svg" alt="icon1">
-            <span>Trabajo Remoto</span>
-            <img class="icons" src="/assets/icon2.svg" alt="icon2">
-            <span>Repensando la programación</span>
-            <img class="icons" src="/assets/icon3.svg" alt="icon3">
-            <span>Bases del código</span>
-            <img class="icons" src="/assets/icon4.svg" alt="icon4">
-            <span>Seguridad informática</span>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon1.svg" alt="icon1">
+                <span>Trabajo Remoto</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon2.svg" alt="icon2">
+                <span>Repensando la programación</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon3.svg" alt="icon3">
+                <span>Bases del código</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon4.svg" alt="icon4">
+                <span>Seguridad informática</span>
+            </div>
         </div>
 
     </div>

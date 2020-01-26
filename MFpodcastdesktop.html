@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="MFpodcaststyle.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="">
     <script src="https://kit.fontawesome.com/9dd00af5f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="MFpodcaststyle.css">
     <title>Podcast</title>
 </head>
 
@@ -21,13 +20,12 @@
         <div class="logo">
             <img class="bounce-in-top" src="/assets/logo.svg" alt="logo">
 
-
-
             <label for="menu-toggle">
                 <div class="button">
                     <span></span>
                     <span></span>
                     <span></span>
+                    
                 </div>
 
             </label>
@@ -38,13 +36,13 @@
         <ul class="menu-lista" id="menu">
 
             <li>
-                <a href="#">EPISODIOS</a></li>
+                <a href="#episodios">EPISODIOS</a></li>
             <li>
-                <a href="#">NOSOTROS</a></li>
+                <a href="#nosotros">NOSOTROS</a></li>
             <li>
-                <a href="#">ENTREVISTAS</a></li>
+                <a href="#entrevistas">ENTREVISTAS</a></li>
             <li>
-                <a href="#">TÓPICOS</a></li>
+                <a href="#topicos">TÓPICOS</a></li>
 
         </ul>
     </nav>
@@ -59,25 +57,26 @@
     </div>
 
     <div id="episodios" class="episodios">
-
-        <h3>Episodios</h3>
-
+        
+        
         <div class="episodios-container">
+        <h3>Episodios</h3>   
+                        
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
-               frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
-               frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
         </div>
 
         <div class="episodios-container">
 
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
-               frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
             <iframe class="contained-if" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
-               frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
         </div>
@@ -85,14 +84,14 @@
 
     </div>
 
-    <div class="telefono">
+    <div class="telefono" id="nosotros">
 
         <div class="donde-venimos">
             <img src="/assets/phone.png" alt="phone-donde-venimos">
         </div>
 
         <div class="tel-textos">
-            <h2>De dónde <br>venimos</h2>
+            <h2>De dónde venimos</h2>
             <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the
                 Universe, are challenged by this point of pale light. </p>
 
@@ -105,7 +104,7 @@
         </div>
     </div>
 
-    <div class="invitados">
+    <div class="invitados" id="entrevistas">
 
         <h2>Invitadas/os Estelares</h2>
 
@@ -127,18 +126,26 @@
     </div>
 
 
-    <div class="temas">
-        <h2>Algunos de <br>nuestros temas</h2>
+    <div class="temas" id="topicos">
+        <h2>Algunos de nuestros temas</h2>
 
         <div class="temas-icons">
-            <img class="icons" src="/assets/icon1.svg" alt="icon1">
-            <span>Trabajo Remoto</span>
-            <img class="icons" src="/assets/icon2.svg" alt="icon2">
-            <span>Repensando la programación</span>
-            <img class="icons" src="/assets/icon3.svg" alt="icon3">
-            <span>Bases del código</span>
-            <img class="icons" src="/assets/icon4.svg" alt="icon4">
-            <span>Seguridad informática</span>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon1.svg" alt="icon1">
+                <span>Trabajo Remoto</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon2.svg" alt="icon2">
+                <span>Repensando la programación</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon3.svg" alt="icon3">
+                <span>Bases del código</span>
+            </div>
+            <div class="iconos-contenedor">
+                <img class="icons" src="/assets/icon4.svg" alt="icon4">
+                <span>Seguridad informática</span>
+            </div>
         </div>
 
     </div>
@@ -159,7 +166,7 @@
         <div class="icons-footer">
             <i class="fab fa-spotify"></i>
             <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter" ></i>
+            <i class="fab fa-twitter"></i>
             <i class="fab fa-facebook"></i>
             <i class="fab fa-telegram"></i>
 
