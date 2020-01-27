@@ -20,10 +20,8 @@ $colorboton: #00F3BB;
 }
 
 body {
-
     overflow-x: hidden;
 }
-
 
 //menu hamburguesa
 .button {
@@ -37,10 +35,7 @@ body {
     color: white;
     cursor: pointer;
     position: relative;
-
 }
-
-
 
 label {
     cursor: pointer;
@@ -65,18 +60,13 @@ label {
                 text-decoration: line-through;
 
                 &:active {
-                    color:#060A24; 
+                    color: #060A24;
                     opacity: 0.5;
                     text-decoration: line-through;
                 }
-
-
-
             }
-
         }
     }
-
 }
 
 #menu li a {
@@ -120,12 +110,10 @@ label {
 
 .menu-lista {
     display: inline-flex;
-    //width: 50%;
     justify-content: flex-end;
 }
 
-
-//animacion logo
+//Animacion logo
 .bounce-in-top {
     -webkit-animation: bounce-in-bottom 1.1s both;
     animation: bounce-in-bottom 1.1s both;
@@ -251,28 +239,6 @@ label {
     }
 }
 
-
-
-
-//   #menu{
-//       display: block;
-//   }
-
-
-/*.menu {
-    padding: 25px;
-}
-
-.menu-lista {
-    text-align: right;
-}
-
-.menu-lista li {
-    list-style: none;
-    display: inline;
-    padding-right: 20px;
-}*/
-
 //header
 
 .header {
@@ -317,7 +283,7 @@ label {
     color: white;
 }
 
-//episodios
+//Episodios
 
 .episodios {
     display: block;
@@ -342,17 +308,15 @@ label {
     align-items: center;
     position: relative;
     top: 220px;
-
 }
 
 .contained-if {
     width: 584px;
     height: 232px;
     padding: 20px;
-
 }
 
-//de donde venimos - comienza con img del telefono
+//De donde venimos - Comienza con la img del teléfono
 
 .tel-imagen {
     display: flex;
@@ -397,9 +361,7 @@ label {
 
 }
 
-
-
-//invitados estelares
+//Invitados estelares
 
 .fotos {
     display: flex;
@@ -421,7 +383,6 @@ label {
 .invitados {
     position: relative;
     bottom: 60px;
-    //padding-bottom: 4rem;
 }
 
 //iconos
@@ -435,7 +396,6 @@ label {
 
 .temas {
     padding-bottom: 5rem;
-    
 }
 
 .temas-icons {
@@ -451,7 +411,6 @@ label {
     padding: 3rem 5.7rem 0 0;
 }
 
-
 .temas-icons div span {
     font-family: $font-family;
     font-weight: 600;
@@ -463,7 +422,7 @@ label {
     padding-bottom: 1rem;
 }
 
-//novedades con boton
+//Novedades con boton
 
 .novedades {
     display: inline-block;
@@ -505,7 +464,7 @@ label {
     }
 }
 
-//footer
+//Footer
 
 .footer {
     display: flex;
@@ -523,7 +482,6 @@ label {
     width: 49%;
     display: inline-block;
     margin-left: 8em;
-
 }
 
 .icons-footer {
@@ -535,6 +493,10 @@ label {
 
 .icons-footer i {
     margin: 0 0 0 1em;
+}
+
+#stl {
+    color: black;
 }
 
 @media screen and (min-width: 1000px) {
