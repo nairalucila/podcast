@@ -54,15 +54,18 @@ label {
     text-align: center;
     background: white;
     padding: 10px 0;
+
+    li {
+        a {
+            color: black;
+            padding: 10px 0;
+            display: block;
+            font-family: $font-family2;
+            font-size: 16px;
+        }
+    }
 }
 
-#menu li a {
-    color: black;
-    padding: 10px 0;
-    display: block;
-    font-family: $font-family2;
-    font-size: 16px;
-}
 
 #menu-toggle:checked+#menu {
     display: block;
@@ -230,29 +233,34 @@ label {
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    h1 {
+        font-size: 36px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        display: block;
+        width: 230px;
+        padding-right: 40px;
+
+        span {
+            color: #0000EC;
+        }
+    }
+
+
+    p {
+        font-size: 14px;
+        font-family: 'IBM Plex Mono', monospace;
+        padding-bottom: 56px;
+        text-align: justify;
+        margin-top: 20px;
+        display: block;
+        width: 288px;
+    }
+
 }
 
-.header h1 {
-    font-size: 36px;
-    font-family: 'IBM Plex Sans', sans-serif;
-    display: block;
-    width: 230px;
-    padding-right: 40px;
-}
 
-.header p {
-    font-size: 14px;
-    font-family: 'IBM Plex Mono', monospace;
-    padding-bottom: 56px;
-    text-align: justify;
-    margin-top: 20px;
-    display: block;
-    width: 288px;
-}
 
-.header span {
-    color: #0000EC;
-}
 
 .boton-header {
     background-color: #00F3BB;
@@ -265,12 +273,13 @@ label {
     border: none;
     position: relative;
     bottom: 23px;
+
+    &:hover {
+        background: linear-gradient(to right, #0000FE, #00F0B8);
+        color: white;
+    }
 }
 
-.boton-header:hover {
-    background: linear-gradient(to right, #0000FE, #00F0B8);
-    color: white;
-}
 
 //Episodios
 
@@ -279,16 +288,16 @@ label {
     background: linear-gradient(to right, #0000A3, #0000FF);
     clip-path: polygon(0 11%, 100% 0, 100% 88%, 0% 100%);
     height: 1210px;
-}
 
-.episodios h3 {
-    font-size: 36px;
-    font-family: 'IBM Plex Sans', monospace;
-    color: white;
-    font-weight: 300;
-    position: relative;
-    top: 140px;
-    margin-left: 3rem;
+    & h3 {
+        font-size: 36px;
+        font-family: 'IBM Plex Sans', monospace;
+        color: white;
+        font-weight: 300;
+        position: relative;
+        top: 140px;
+        margin-left: 3rem;
+    }
 }
 
 .episodios-container {
@@ -298,12 +307,14 @@ label {
     position: relative;
     top: 185px;
     height: 380px;
+
+    & iframe {
+        width: 280px;
+        height: 370px;
+    }
 }
 
-.episodios-container iframe {
-    width: 280px;
-    height: 370px;
-}
+
 
 //De donde venimos - Comienza con la img del teléfono
 
@@ -312,11 +323,12 @@ label {
     bottom: 140px;
     display: flex;
     align-items: flex-start;
+
+    & img {
+        width: 360px;
+    }
 }
 
-.donde-venimos img {
-    width: 360px;
-}
 
 .telefono h2 {
     font-size: 36px;
@@ -472,4 +484,339 @@ label {
 
 #stl {
     color: black;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1500px) {
+    //variables//
+
+    $font-family: 'IBM Plex Sans',
+        sans-serif;
+    $font-family2: 'IBM Plex Mono',
+        monospace;
+    $tamañotitulos: 36px;
+    $line-height: 42px;
+    $tamaniotitulosdesktop: 64px;
+    $titulos2: 48px;
+    $subtitulosdesk: 16px;
+
+    $color1: #060A24;
+    $colorboton: #00F3BB;
+
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    //menu hamburguesa
+    .button {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    #menu {
+        display: block;
+        text-align: right;
+
+        li {
+            display: inline-block;
+            margin: 0 24px;
+
+            a {
+                text-decoration: none;
+                font-family: $font-family2;
+
+                &:hover {
+                    color: #00F3BB;
+                    text-decoration: line-through;
+
+                    &:active {
+                        color: #060A24;
+                        opacity: 0.5;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-toggle:checked+#menu {
+        display: none;
+    }
+
+    #navigation {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .logo {
+        display: inline-flex;
+        justify-content: flex-start;
+        padding: 10px 0px 25px 4vw;
+        margin: unset; /// bajar con padding
+    }
+
+    .menu-lista {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    //header
+
+    .header {
+        margin-left: 40px;
+        margin-top: 4rem;
+        display: block;
+        align-items: unset;
+        flex-direction: unset;
+
+
+        h1 {
+            font-size: $tamaniotitulosdesktop;
+            font-family: 'IBM Plex Sans', sans-serif;
+            padding-left: 80px;
+            width: unset;
+            padding-right: unset;
+        }
+
+        p {
+            font-size: $subtitulosdesk;
+            font-family: 'IBM Plex Mono', monospace;
+            padding-bottom: 56px;
+            text-align: justify;
+            padding: 10px 445px 50px 80px;
+            margin: unset;
+            display: block;
+            width: 622px;
+        }
+
+    }
+
+    .boton-header {
+        width: 226px;
+        left: 80px;
+        bottom: unset;
+        cursor: pointer;
+    }
+
+    //Episodios
+    .episodios {
+        height: 1042px;
+
+        & h3 {
+            top: 200px;
+            left: 45px;
+            margin-left: unset;
+        }
+    }
+
+
+    .episodios-container {
+        justify-content: center;
+        position: relative;
+        top: 220px;
+        height: unset;
+        align-items: unset;
+        flex-direction: unset;
+
+        & iframe {
+            width: 584px;
+            height: 232px;
+            padding: 20px;
+        }
+    }
+
+    //De donde venimos - Comienza con la img del teléfono
+
+    .donde-venimos {
+        align-items: flex-start;
+        display: inline-flex;
+        width: 49%;
+        position: unset;
+
+        & img {
+            width: 458px;
+            position: relative;
+            left: 150px;
+            top: 90px;
+        }
+    }
+
+
+    .tel-textos {
+        display: inline-block;
+        width: 50%;
+        position: relative;
+        bottom: 190px;
+    }
+
+    .tel-textos h2 {
+        font-family: $font-family;
+        font-size: $titulos2;
+        margin-bottom: 10px;
+    }
+
+    .tel-textos p {
+        font-family: $font-family2;
+        font-size: $subtitulosdesk;
+        width: 500px;
+        padding-top: 17px;
+    }
+
+    .telefono {
+        position: relative;
+        bottom: 260px;
+
+    }
+
+    //Invitados estelares
+
+    .fotos {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .invitados-img {
+        width: 500px;
+
+    }
+
+    .invitados h2 {
+        font-family: $font-family;
+        color: $color1;
+        font-size: 48px;
+        padding: 0 10px 20px 140px;
+    }
+
+    .invitados {
+        position: relative;
+        bottom: 60px;
+    }
+
+    //iconos
+
+    .temas h2 {
+        font-size: $titulos2;
+        font-family: $font-family;
+        color: $color1;
+        padding: 30px 10px 20px 145px;
+    }
+
+    .temas {
+        padding-bottom: 5rem;
+    }
+
+    .temas-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .iconos-contenedor {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 3rem 5.7rem 0 0;
+    }
+
+    .temas-icons div span {
+        font-family: $font-family;
+        font-weight: 600;
+        color: $color1;
+    }
+
+    .icons {
+        width: 104px;
+        padding-bottom: 1rem;
+    }
+
+    //Novedades con boton
+
+    .novedades {
+        display: inline-block;
+        background: linear-gradient(to right, #0000A3, #0000FF);
+        clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0% 100%);
+        height: 518px;
+        width: 100%;
+        padding-top: 80px;
+    }
+
+    .novedades h1 {
+        font-family: $font-family;
+        color: white;
+        font-size: $titulos2;
+        text-align: center;
+        line-height: $line-height;
+        padding: 110px 50px 0px 40px;
+    }
+
+    .boton-footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .botonfooter {
+        background-color: #00F3BB;
+        color: #060A24;
+        width: 345px;
+        height: 56px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 600;
+        font-size: 18px;
+        border: none;
+
+        &:hover {
+            background: linear-gradient(to right, #0000FE, #00F0B8);
+            color: white;
+        }
+    }
+
+    //Footer
+
+    .footer {
+        display: flex;
+        height: 70px;
+        background-color: white;
+        justify-content: space-between;
+        margin-top: 6rem;
+    }
+
+    .footer p {
+        font-family: $font-family2;
+        font-size: 14px;
+        color: $color1;
+        text-align: left;
+        width: 49%;
+        display: inline-block;
+        margin-left: 8em;
+    }
+
+    .icons-footer {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        margin-right: 8em;
+    }
+
+    .icons-footer i {
+        margin: 0 0 0 1em;
+    }
+
+    #stl {
+        color: black;
+    }
+
+    @media screen and (min-width: 1000px) {
+        .logo {
+            display: flex
+        }
+    }
 }
