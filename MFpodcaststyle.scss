@@ -330,47 +330,53 @@ label {
 }
 
 
-.telefono h2 {
-    font-size: 36px;
-    color: #060A24;
-    font-family: 'IBM Plex Sans', monospace;
-    padding: 8px 0 0px 10px;
-    display: block;
-    width: 200px; // !!! 
-}
-
-.telefono div p {
-    padding: 8px 10px 0px 10px;
-    font-size: 14px;
-    color: #060A24;
-    font-family: 'IBM Plex Mono', monospace;
-    line-height: 25px;
-}
-
 .tel-textos {
     display: block;
     position: relative;
     bottom: 90px;
+
+    & h2 {
+        font-size: 36px;
+        color: #060A24;
+        font-family: 'IBM Plex Sans', monospace;
+        padding: 8px 0 0px 10px;
+        display: block;
+        width: 200px; // !!! 
+    }
+
+    & p {
+        padding: 8px 10px 0px 10px;
+        font-size: 14px;
+        color: #060A24;
+        font-family: 'IBM Plex Mono', monospace;
+        line-height: 25px;
+    }
 }
+
+
 
 //Invitados estelares
 
-.fotos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.invitados {
+
+    & h2 {
+        font-family: $font-family;
+        color: $color1;
+        font-size: 36px;
+        padding: 8px 10px 20px 10px;
+    }
+
+    & .fotos {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        & .invitados-img {
+            width: 350px;
+        }
+    }
 }
 
-.invitados-img {
-    width: 350px;
-}
-
-.invitados h2 {
-    font-family: $font-family;
-    color: $color1;
-    font-size: 36px;
-    padding: 8px 10px 20px 10px;
-}
 
 .temas h2 {
     font-size: $tamañotitulos;
@@ -385,37 +391,42 @@ label {
 .temas {
     display: flex;
     flex-direction: column;
+
+    & .temas-icons {
+        display: inline-flex;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    & .temas-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & .iconos-contenedor {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 0 0 0;
+
+        & span {
+            font-family: $font-family;
+            font-weight: 600;
+            color: $color1;
+        }
+
+        & .icons {
+            padding: 30px 0px 20px 0px;
+            width: 104px;
+        }
+    }
 }
 
-.temas-icons {
-    display: inline-flex;
-    text-align: center;
-    padding-bottom: 2rem;
-}
 
-.temas-icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.iconos-contenedor {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem 0 0 0;
-}
 
-.temas-icons span {
-    font-family: $font-family;
-    font-weight: 600;
-    color: $color1;
-}
 
-.icons {
-    padding: 30px 0px 20px 0px;
-    width: 104px;
-}
 
 //novedades con boton
 
@@ -509,7 +520,7 @@ label {
     }
 
     body {
-        overflow-x: hidden;
+        overflow-x: hidden ;
     }
 
     //menu hamburguesa
@@ -650,92 +661,107 @@ label {
     }
 
 
-    .tel-textos {
-        display: inline-block;
-        width: 50%;
-        position: relative;
-        bottom: 190px;
-    }
-
-    .tel-textos h2 {
-        font-family: $font-family;
-        font-size: $titulos2;
-        margin-bottom: 10px;
-    }
-
-    .tel-textos p {
-        font-family: $font-family2;
-        font-size: $subtitulosdesk;
-        width: 500px;
-        padding-top: 17px;
-    }
-
     .telefono {
         position: relative;
         bottom: 260px;
+
+        .tel-textos {
+            display: inline-block;
+            width: 50%;
+            position: relative;
+            bottom: 190px;
+
+            & h2 {
+                font-family: $font-family;
+                font-size: $titulos2;
+                margin-bottom: 10px;
+                color: unset;
+                padding: unset;
+                width: unset;
+            }
+
+            & p {
+                font-family: $font-family2;
+                font-size: $subtitulosdesk;
+                width: 500px;
+                padding-top: 17px;
+            }
+
+        }
+
 
     }
 
     //Invitados estelares
 
-    .fotos {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .invitados-img {
-        width: 500px;
-
-    }
-
-    .invitados h2 {
-        font-family: $font-family;
-        color: $color1;
-        font-size: 48px;
-        padding: 0 10px 20px 140px;
-    }
-
     .invitados {
         position: relative;
         bottom: 60px;
+
+        & h2 {
+            font-family: $font-family;
+            color: $color1;
+            font-size: 48px;
+            padding: 0 10px 20px 140px;
+        }
+
+        & .fotos {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            & .invitados-img {
+                width: 449px;
+            }
+        }
     }
+
+
 
     //iconos
 
-    .temas h2 {
-        font-size: $titulos2;
-        font-family: $font-family;
-        color: $color1;
-        padding: 30px 10px 20px 145px;
-    }
-
     .temas {
         padding-bottom: 5rem;
+        display: unset;
+
+        & h2 {
+            font-size: $titulos2;
+            font-family: $font-family;
+            color: $color1;
+            padding: 30px 10px 20px 145px;
+        }
+
+        & .temas-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: unset;
+        }
+
+        & .iconos-contenedor {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 3rem 5.7rem 0 0;
+
+            & span {
+                font-family: $font-family;
+                font-weight: 600;
+                color: $color1;
+            }
+
+            & .icons {
+                width: 104px;
+                padding: unset unset 1rem unset;
+            }
+        }
     }
 
-    .temas-icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
 
-    .iconos-contenedor {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 3rem 5.7rem 0 0;
-    }
 
-    .temas-icons div span {
-        font-family: $font-family;
-        font-weight: 600;
-        color: $color1;
-    }
 
-    .icons {
-        width: 104px;
-        padding-bottom: 1rem;
-    }
+
 
     //Novedades con boton
 
