@@ -255,7 +255,7 @@ label {
   align-items: center;
   flex-direction: column; }
   .invitados .fotos .invitados-img {
-    width: 350px; }
+    width: 100%; }
 
 .temas h2 {
   font-size: 36px;
@@ -268,11 +268,8 @@ label {
   display: flex;
   flex-direction: column; }
   .temas .temas-icons {
-    display: inline-flex;
     text-align: center;
-    padding-bottom: 2rem; }
-  .temas .temas-icons {
-    display: flex;
+    padding-bottom: 2rem;
     flex-direction: column;
     justify-content: center; }
   .temas .iconos-contenedor {
@@ -490,13 +487,14 @@ label {
       font-size: 48px;
       font-family: "IBM Plex Sans", sans-serif;
       color: #060A24;
-      padding: 30px 10px 20px 145px;
+      padding: 0px 10px 10px 145px;
       width: unset; }
     .temas .temas-icons {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      text-align: unset; }
+      text-align: unset;
+      padding-bottom: 3rem; }
     .temas .iconos-contenedor {
       display: flex;
       align-items: center;
@@ -571,8 +569,5 @@ label {
 
   #stl {
     color: black; } }
-@media screen and (min-width: 600px) and (max-width: 1900px) and (min-width: 1000px) {
-  .logo {
-    display: flex; } }
 
 /*# sourceMappingURL=MFpodcaststyle.css.map */

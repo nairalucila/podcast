@@ -66,7 +66,6 @@ label {
     }
 }
 
-
 #menu-toggle:checked+#menu {
     display: block;
     background-color: blue;
@@ -246,7 +245,6 @@ label {
         }
     }
 
-
     p {
         font-size: 14px;
         font-family: 'IBM Plex Mono', monospace;
@@ -258,9 +256,6 @@ label {
     }
 
 }
-
-
-
 
 .boton-header {
     background-color: #00F3BB;
@@ -279,7 +274,6 @@ label {
         color: white;
     }
 }
-
 
 //Episodios
 
@@ -314,8 +308,6 @@ label {
     }
 }
 
-
-
 //De donde venimos - Comienza con la img del teléfono
 
 .donde-venimos {
@@ -328,7 +320,6 @@ label {
         width: 360px;
     }
 }
-
 
 .tel-textos {
     display: block;
@@ -353,8 +344,6 @@ label {
     }
 }
 
-
-
 //Invitados estelares
 
 .invitados {
@@ -372,7 +361,7 @@ label {
         flex-direction: column;
 
         & .invitados-img {
-            width: 350px;
+            width: 100%;
         }
     }
 }
@@ -392,13 +381,8 @@ label {
     flex-direction: column;
 
     & .temas-icons {
-        display: inline-flex;
         text-align: center;
         padding-bottom: 2rem;
-    }
-
-    & .temas-icons {
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
@@ -506,7 +490,6 @@ label {
     $color1: #060A24;
     $colorboton: #00F3BB;
 
-
     * {
         padding: 0;
         margin: 0;
@@ -600,7 +583,6 @@ label {
             display: block;
             width: 622px;
         }
-
     }
 
     .boton-header {
@@ -620,7 +602,6 @@ label {
             margin-left: unset;
         }
     }
-
 
     .episodios-container {
         justify-content: center;
@@ -653,7 +634,6 @@ label {
         }
     }
 
-
     .telefono {
         position: relative;
         bottom: 260px;
@@ -679,10 +659,7 @@ label {
                 width: 500px;
                 padding-top: 17px;
             }
-
         }
-
-
     }
 
     //Invitados estelares
@@ -710,8 +687,6 @@ label {
         }
     }
 
-
-
     //iconos
 
     .temas {
@@ -722,7 +697,7 @@ label {
             font-size: $titulos2;
             font-family: $font-family;
             color: $color1;
-            padding: 30px 10px 20px 145px;
+            padding: 0px 10px 10px 145px;
             width: unset;
         }
 
@@ -731,6 +706,7 @@ label {
             flex-direction: row;
             justify-content: center;
             text-align: unset;
+            padding-bottom: 3rem;
         }
 
         & .iconos-contenedor {
@@ -751,11 +727,6 @@ label {
             }
         }
     }
-
-
-
-
-
 
     //Novedades con boton
 
@@ -793,14 +764,12 @@ label {
         font-size: 18px;
         border: none;
 
-
         &:hover {
             background: linear-gradient(to right, #0000FE, #00F0B8);
             color: white;
             cursor: pointer;
         }
-
-        
+    
     }
 
     //Footer
@@ -836,15 +805,8 @@ label {
         }
     }
 
-
-
     #stl {
         color: black;
     }
 
-    @media screen and (min-width: 1000px) {
-        .logo {
-            display: flex
-        }
-    }
 }
