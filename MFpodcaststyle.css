@@ -5,25 +5,6 @@
 body {
   overflow-x: hidden; }
 
-.button {
-  margin: 0 auto;
-  display: inline-block;
-  width: 40px;
-  height: 36px;
-  padding: 10px;
-  border-radius: 7px;
-  color: white;
-  cursor: pointer;
-  position: relative; }
-
-.button span {
-  display: block;
-  width: 40px;
-  height: 4px;
-  background: black;
-  margin-top: 7px;
-  text-align: right; }
-
 label {
   cursor: pointer; }
 
@@ -42,7 +23,7 @@ label {
     font-family: "IBM Plex Mono", monospace;
     font-size: 16px; }
 
-#menu-toggle:checked + #menu {
+#menu-toggle:checked ~ #menu {
   display: block;
   background-color: blue;
   height: auto;
@@ -50,12 +31,25 @@ label {
   padding: 20px;
   text-decoration: none;
   list-style: none; }
-  #menu-toggle:checked + #menu li a {
+  #menu-toggle:checked ~ #menu li a {
     text-decoration: none;
     color: white; }
-    #menu-toggle:checked + #menu li a:hover {
+    #menu-toggle:checked ~ #menu li a:hover {
       color: #00F3BB;
       text-decoration: line-through; }
+
+#menu-toggle:checked ~ .logo > label > span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 10px);
+  transition: 1s;
+  width: 35px; }
+
+#menu-toggle:checked ~ .logo > label > span:nth-child(2) {
+  opacity: 0; }
+
+#menu-toggle:checked ~ .logo > label > span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -10px);
+  transition: 1s;
+  width: 35px; }
 
 #navigation {
   display: flex;
@@ -67,6 +61,24 @@ label {
   justify-content: space-between;
   padding-bottom: 25px;
   margin-left: 4vw; }
+
+.button {
+  display: inline-block;
+  width: 40px;
+  height: 36px;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  position: relative; }
+
+.button > span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: black;
+  margin-top: 7px;
+  text-align: right; }
 
 .bounce-in-top {
   -webkit-animation: bounce-in-bottom 1.1s both;
@@ -170,6 +182,9 @@ label {
     padding-right: 40px; }
     .header h1 span {
       color: #0000EC; }
+    .header h1 .tachado {
+      text-decoration: line-through;
+      color: black; }
   .header p {
     font-size: 14px;
     font-family: 'IBM Plex Mono', monospace;
@@ -217,13 +232,16 @@ label {
   height: 380px; }
   .episodios-container iframe {
     width: 280px;
-    height: 370px; }
+    height: 370px;
+    border: 0px;
+    background-color: transparent; }
 
 .donde-venimos {
   position: relative;
   bottom: 140px;
   display: flex;
-  align-items: flex-start; }
+  align-items: flex-start;
+  left: 80px; }
   .donde-venimos img {
     width: 360px; }
 
@@ -333,9 +351,8 @@ label {
   justify-content: space-around;
   margin-left: 3rem;
   margin-right: 3rem; }
-
-#stl {
-  color: black; }
+  .icons-footer a {
+    color: black; }
 
 @media screen and (min-width: 600px) and (max-width: 1900px) {
   * {
@@ -407,6 +424,10 @@ label {
       display: block;
       width: 622px; }
 
+  .tachado {
+    text-decoration: line-through;
+    color: unset; }
+
   .boton-header {
     width: 226px;
     left: 80px;
@@ -430,13 +451,16 @@ label {
     .episodios-container iframe {
       width: 584px;
       height: 232px;
-      padding: 20px; }
+      padding: 20px;
+      border: unset;
+      background-color: unset; }
 
   .donde-venimos {
     align-items: flex-start;
     display: inline-flex;
     width: 49%;
-    position: unset; }
+    position: unset;
+    left: unset; }
     .donde-venimos img {
       width: 458px;
       position: relative;
@@ -566,8 +590,7 @@ label {
     margin-left: unset; }
     .icons-footer i {
       margin: 0 0 0 1em; }
-
-  #stl {
-    color: black; } }
+    .icons-footer a {
+      color: black; } }
 
 /*# sourceMappingURL=MFpodcaststyle.css.map */

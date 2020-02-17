@@ -20,27 +20,6 @@ body {
 }
 
 //menu hamburguesa
-.button {
-    margin: 0 auto;
-    display: inline-block;
-    width: 40px;
-    height: 36px;
-    padding: 10px;
-    border-radius: 7px;
-    color: white;
-    cursor: pointer;
-    position: relative;
-}
-
-.button span {
-    display: block;
-    width: 40px;
-    height: 4px;
-    background: black;
-    margin-top: 7px;
-    text-align: right;
-}
-
 label {
     cursor: pointer;
 }
@@ -66,7 +45,7 @@ label {
     }
 }
 
-#menu-toggle:checked+#menu {
+#menu-toggle:checked~#menu {
     display: block;
     background-color: blue;
     height: auto;
@@ -86,6 +65,25 @@ label {
     }
 }
 
+#menu-toggle:checked~.logo>label>span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 10px);
+    transition: 1s;
+    width: 35px;
+
+}
+
+#menu-toggle:checked~.logo>label>span:nth-child(2) {
+    opacity: 0;
+
+}
+
+#menu-toggle:checked~.logo>label>span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -10px);
+    transition: 1s;
+    width: 35px;
+
+}
+
 #navigation {
     display: flex;
     justify-content: flex-end;
@@ -98,6 +96,29 @@ label {
     padding-bottom: 25px;
     margin-left: 4vw;
 }
+
+.button {
+    // margin: 0 auto;
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.button > span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: black;
+    margin-top: 7px;
+    text-align: right;
+    
+}
+
 
 //Animación logo
 
@@ -243,6 +264,10 @@ label {
         span {
             color: #0000EC;
         }
+        & .tachado {
+            text-decoration: line-through;
+            color: black;
+        }
     }
 
     p {
@@ -305,6 +330,8 @@ label {
     & iframe {
         width: 280px;
         height: 370px;
+        border: 0px;     
+        background-color: transparent;
     }
 }
 
@@ -315,6 +342,7 @@ label {
     bottom: 140px;
     display: flex;
     align-items: flex-start;
+    left: 80px;
 
     & img {
         width: 360px;
@@ -468,10 +496,9 @@ label {
     justify-content: space-around;
     margin-left: 3rem;
     margin-right: 3rem;
-}
-
-#stl {
-    color: black;
+    & a {
+        color: black;
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1900px) {
@@ -583,7 +610,14 @@ label {
             display: block;
             width: 622px;
         }
+        
     }
+
+    .tachado{
+        text-decoration: line-through;
+        color:unset;
+    }
+    
 
     .boton-header {
         width: 226px;
@@ -615,6 +649,8 @@ label {
             width: 584px;
             height: 232px;
             padding: 20px;
+            border: unset;
+            background-color: unset;
         }
     }
 
@@ -625,6 +661,8 @@ label {
         display: inline-flex;
         width: 49%;
         position: unset;
+        left: unset;
+        
 
         & img {
             width: 458px;
@@ -769,7 +807,7 @@ label {
             color: white;
             cursor: pointer;
         }
-    
+
     }
 
     //Footer
@@ -803,10 +841,11 @@ label {
         i {
             margin: 0 0 0 1em;
         }
-    }
 
-    #stl {
-        color: black;
+        & a{
+
+            color: black;
+        }
     }
 
 }
